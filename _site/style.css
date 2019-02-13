@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-color: #16202E; /*this is adrienne's blue*/
+  position: fixed; /*this is the critical element that fixes the section to the top of the page*/
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+body {
+  /* padding-left: 12rem; */
+/*  this gives the heading padding to push the first section down the page once the header is fixed (padding-top) or to the left (padding-left).  */
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 3rem;
+  padding-left: 15%;
+
+}
+
+nav {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(60,60,60,0.1);
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  margin: 2rem;
+  display: inline-block;
+  color: rgba(60,60,60,0.5);
+}
+
+.bg image{
+  background-image: url('');
+  background-attachment: fixed; /*this fixes the background image in place and allows me to scroll over it, creating a groovy effect*/
+  background-size: cover;
+  background-position: center;
+  min-height: 25vh;
+}
