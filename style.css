@@ -1,11 +1,17 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
+
+[class*=col-], [class*=col_], [class~=col] {
+  padding: 0;
+}
+
 header {
   background-color: #16202E; /*this is adrienne's blue*/
   position: fixed; /*this is the critical element that fixes the section to the top of the page*/
-  min-height: 100vh;
+  height: 100vh;
   top: 0;
   left: 0;
 }
@@ -19,31 +25,71 @@ body {
 h1 {
   color: white;
   font-weight: 400;
-  font-size: 3rem;
-  padding-left: 15%;
+  font-size: 5vw; /*this allows the h1 to resize on scale*/
+  padding-left: 4%;
+}
+
+ .about {
+  background-color: rgba(255,255,255,0.5);
+  height: 80vh;
+  position: absolute;
+  top: 120px;
+  right: 10px;
+  width: 30rem;
+  padding: 3%;
+  overflow: scroll;
+}
+
+.about p{
+  padding-bottom: 2rem;
 
 }
 
-nav {
+.about h2 {
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.home-nav {
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: rgba(60,60,60,0.1);
+  background-color: rgba(255,255,255,0.1);
   border-radius: 20px;
 }
 
-a {
+.project-nav {
+  position: fixed;
+  bottom: 30px;
+  left: 15px;
+}
+
+.project-nav a {
+  color: white;
+  font-size: 1.7vw;
+  display: block;
+  text-decoration: none;
+}
+
+
+.home-nav a {
   text-decoration: none;
   padding: 0.5rem 2rem;
   margin: 2rem;
   display: inline-block;
-  color: black;
+  color: rgba(255,255,255,0.7);
 }
 
-.bg-image{
-  background-image: url('/images/saturday-arvo1.jpg');
+.bg-image {
   background-attachment: fixed; /*this fixes the background image in place and allows me to scroll over it, creating a groovy effect*/
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
+}
+
+.adrienne-portrait {
+  background-image: url('/images/adrienne-portrait.jpg');
+  background-position: 35% 70%;
+  background-size: cover;
   min-height: 100vh;
 }
