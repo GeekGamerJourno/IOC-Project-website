@@ -37,13 +37,13 @@ a {
   padding: 0.5rem 2rem;
   margin: 2rem;
   display: inline-block;
-  color: rgba(60,60,60,0.5);
+  color: black;
 }
 
-.bg image{
-  background-image: url('');
+.bg-image{
+  background-image: url('/images/saturday-arvo1.jpg');
   background-attachment: fixed; /*this fixes the background image in place and allows me to scroll over it, creating a groovy effect*/
   background-size: cover;
   background-position: center;
-  min-height: 25vh;
+  min-height: 100vh;
 }
