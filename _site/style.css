@@ -113,9 +113,8 @@ h1 {
 }
 
 .banner-image {
-  background-attachment: fixed; /*this fixes the background image in place and allows me to scroll over it, creating a groovy effect*/
+  background-image: url('images/saturday-arvo7.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
-  position: relative;
+  min-height: 20vh;
 }
