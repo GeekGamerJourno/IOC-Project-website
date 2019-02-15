@@ -8,10 +8,15 @@
   padding: 0;
 }
 
+[class*="grid-"], [class*="grid_"], [class~="grid"] {
+	margin: 0;
+  /* this takes the margin off all classes of grid or classes containg a grid. the col one above does the same for col. that overides gridlex's defaut styling because my css stylesheet is below the gridlex in my head */
+}
+
 header {
   background-color: #16202E; /*this is adrienne's blue*/
   position: fixed; /*this is the critical element that fixes the section to the top of the page*/
-  height: 100vh;
+  min-height: 100vh;
   top: 0;
   left: 0;
 }
@@ -29,6 +34,7 @@ h1 {
   padding-left: 4%;
 }
 
+
  .about {
   background-color: rgba(255,255,255,0.5);
   height: 80vh;
@@ -37,7 +43,7 @@ h1 {
   right: 10px;
   width: 30rem;
   padding: 3%;
-  overflow: scroll;
+  overflow: scroll; /* this allows me to scroll inside the about box */
 }
 
 .about p{
@@ -50,18 +56,29 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.description{
+  background-color: rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 100px;
+  right: 10px;
+  width: 75%;
+  padding: 3%;
+}
+
 .home-nav {
   position: fixed;
   top: 10px;
   right: 10px;
   background-color: rgba(255,255,255,0.1);
   border-radius: 20px;
+  z-index: 9; /* this forces the nav bar to the front - like a send to front. Essentially moving it forward on the z axis. */
 }
 
 .project-nav {
   position: fixed;
   bottom: 30px;
   left: 15px;
+  z-index: 9;
 }
 
 .project-nav a {
@@ -69,8 +86,8 @@ h1 {
   font-size: 1.7vw;
   display: block;
   text-decoration: none;
+  overflow-wrap: normal;
 }
-
 
 .home-nav a {
   text-decoration: none;
@@ -85,6 +102,7 @@ h1 {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .adrienne-portrait {
@@ -92,4 +110,12 @@ h1 {
   background-position: 35% 70%;
   background-size: cover;
   min-height: 100vh;
+}
+
+.banner-image {
+  background-attachment: fixed; /*this fixes the background image in place and allows me to scroll over it, creating a groovy effect*/
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
 }

@@ -1,11 +1,15 @@
 ---
 layout: default
-title: Adrienne Williams
+title: Saturday Afternoon Fever
 background-images:
-  - path: images/saturday-arvo1.jpg
+  - path: images/saturday-arvo13.jpg
+    para: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   - path: images/saturday-arvo2.jpg
-  - path: images/saturday-arvo3.jpg
   - path: images/saturday-arvo4.jpg
+    para: Paragraph 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  - path: images/saturday-arvo1.jpg
+  - path: images/saturday-arvo3.jpg
+    para: Paragraph 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   - path: images/saturday-arvo5.jpg
   - path: images/saturday-arvo6.jpg
   - path: images/saturday-arvo7.jpg
@@ -14,7 +18,6 @@ background-images:
   - path: images/saturday-arvo10.jpg
   - path: images/saturday-arvo11.jpg
   - path: images/saturday-arvo12.jpg
-  - path: images/saturday-arvo13.jpg
   - path: images/saturday-arvo14.jpg
   - path: images/saturday-arvo15.jpg
   - path: images/saturday-arvo16.jpg
@@ -22,7 +25,14 @@ background-images:
 ---
  <!-- above the --- (frontmatter) this sets my layout to default. Don't comment in the frontmatter, it breaks everything -->
 {% for image in page.background-images %}
-  <div class="bg-image" style="background-image: url('{{image.path}}')"></div>
+  <div class="bg-image" style="background-image: url('{{image.path}}')">
+  {% if image.para %}
+    <div class="grid description">
+      <p class="col-12-middle ">{{image.para}}
+      </p>
+    </div>
+  {% endif %}
+  </div>
 {% endfor %}
 
 <!-- This loops the background image. The background images path in the front matter selects the image, the style="background-image" is inline css styling to apply the image settings, and the url ('{image.path}') selects the image from the front matter  -->

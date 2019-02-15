@@ -12,26 +12,24 @@
           <h1>aDrienne WiLLiams</h1>
           </div>
           <nav class="project-nav">
-            <a href="#">upcoming exhibitions</a>
-            <a href="#">saturday afternoon fever</a>
-            <a href="#">calling home</a>
-            <a href="#">studio</a>
-            <a href="#">commissions</a>
+            <a href="/upcoming-exhibitions">upcoming exhibitions</a>
+            <a href="/saturday-arvo">saturday afternoon fever</a>
+            <a href="/calling-home">calling home</a>
+            <a href="/studio">studio</a>
+            <a href="/commissions">commissions</a>
           </nav>
         </header>
         <nav class="grid home-nav">
           <a href="/">home</a>
           <a href="/about">about</a>
-          <a href="#">contact</a>
-          <a href="#">blog</a>
+          <a href="/contact">contact</a>
+          <a href="/blog">blog</a>
         </nav>
         <!-- I'll drop this to a hamburger on mobile once I learn jQuery -->
         <section class="col-3"></section>
         <!-- this section is needed to force the col-9 to the right. because I fixed the col 3 -->
         <section class="col-9">
          <!-- above the --- (frontmatter) this sets my layout to default. Don't comment in the frontmatter, it breaks everything -->
-<div class="bg-image" style="background-image: url('images/saturday-arvo1.jpg')"></div>
-<div class="bg-image" style="background-image: url('images/saturday-arvo1.jpg')"></div>
 <div class="bg-image" style="background-image: url('images/saturday-arvo1.jpg')"></div>
 <div class="bg-image" style="background-image: url('images/saturday-arvo7.jpg')"></div>
 <div class="bg-image" style="background-image: url('images/desert1.jpg')"></div>
@@ -44,7 +42,7 @@
 <div class="bg-image" style="background-image: url('images/studio2.jpg')"></div>
 
 
-<!-- This loops the background image. The background images path in the front matter selects the image, the style="background-image" is inline css styling to apply the image settings, and the url ('{image.path}') selects the image from the front matter  -->
+<!-- This loops the background image. The background images path in the front matter selects the image, the style="background-image" is inline css styling to apply the image settings, and the url ('{image.path}') selects the image from the front matter. the "image" in for image is a variable word just to let me know what it is. So when I create the url image.path the image. must match exactly the word after for -->
 
         </section>
       </body>
