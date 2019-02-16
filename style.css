@@ -102,14 +102,14 @@ h3 {
   padding: 3%;
 }
 
-.home-nav {
+/* .home-nav {
   position: fixed;
   top: 10px;
   right: 10px;
   background-color: rgba(255,255,255,0.1);
   border-radius: 20px;
-  z-index: 9; /* this forces the nav bar to the front - like a send to front. Essentially moving it forward on the z axis. */
-}
+  z-index: 9; this forces the nav bar to the front - like a send to front. Essentially moving it forward on the z axis.
+} */
 
 .project-nav {
   position: fixed;
@@ -184,4 +184,97 @@ form input[type="submit"] {
   background-color: #16202E;
   color:white;
   border: none;
+}
+
+/* body {
+  font-family: 'Open Sans', sans-serif;
+  color: #DEAF9C;
+} */
+
+/* this is where you style the button if you want to add more space between the spans than add padding to this div but make sure you also add it to the top and bottom active classes on there top/bottom or else your cross wont line up*/
+
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9;
+  padding: 8px;
+}
+/*this is where you can change the color of the buttons*/
+.burger-button span{
+  width: 40px;
+  border: 2px solid #16202E;
+  background-color: #16202E;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span{
+  border-color: #16202E;
+  background-color:#383;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+/*   transform: rotateZ(270deg); */
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+    display: flex;
+    position: fixed;
+    top: -100vh;
+    /* left:0; */
+    right: 0;
+    /* bottom: 100vh; */
+    background-color: rgba(0, 0, 0, 0.4);
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 8;
+    transition:1s;
+    align-content:space-around;
+    justify-content:space-around;
+    flex-direction:column;
+    width: 75%;
+}
+.burger-menu.active{
+  top:0;
+  bottom:0;
+}
+.burger-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  font-family: 'M PLUS 1p', sans-serif;
+  display:block;
+  padding:5px 15px;
+  text-align:right;
+  white-space:nowrap;
 }
