@@ -3,11 +3,14 @@ layout: default
 title: Adrienne Williams
 background-images:
   - path: images/saturday-arvo1.jpg
+    collection: saturday
   - path: images/saturday-arvo7.jpg
   - path: images/desert1.jpg
+    collection: studio
   - path: images/grass1.jpg
   - path: images/home1.jpg
   - path: images/perry1.jpg
+    collection: commission
   - path: images/road1.jpg
   - path: images/studio1.jpg
   - path: images/road2.jpg
@@ -15,7 +18,12 @@ background-images:
 ---
 
  <!-- above the --- (frontmatter) this sets my layout to default. Don't comment in the frontmatter, it breaks everything -->
-{% for image in page.background-images %}<div class="bg-image" style="background-image: url('{{image.path}}')"></div>
+{% for image in page.background-images %}
+  {% if image.collection %}
+    <a id='{{image.collection}}'></a>
+  {% endif %}
+  <div class="bg-image" style="background-image: url('{{image.path}}')">
+  </div>
 {% endfor %}
 
 <!-- This loops the background image. The background images path in the front matter selects the image, the style="background-image" is inline css styling to apply the image settings, and the url ('{image.path}') selects the image from the front matter. the "image" in for image is a variable word just to let me know what it is. So when I create the url image.path the image. must match exactly the word after for -->
