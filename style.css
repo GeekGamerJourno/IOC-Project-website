@@ -21,6 +21,10 @@ header {
   left: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   /* padding-left: 12rem; */
 /*  this gives the heading padding to push the first section down the page once the header is fixed (padding-top) or to the left (padding-left).  */
@@ -32,6 +36,7 @@ h1 {
   font-weight: 400;
   font-size: 5vw; /*this allows the h1 to resize on scale*/
   padding-left: 4%;
+  text-decoration: none;
 }
 
 h2 {

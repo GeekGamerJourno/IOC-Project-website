@@ -31,9 +31,7 @@ background-images:
 ---
 <!-- above the --- (frontmatter) this sets my layout to default. Don't comment in the frontmatter, it breaks everything -->
 {% for image in page.background-images %}
-  {% if image.collection %}
-    <a id='{{image.collection}}'></a>
-  {% endif %}
+
   <div class="bg-image" style="background-image: url('{{image.path}}')">
   </div>
 
@@ -44,7 +42,10 @@ background-images:
       </p>
     </div>
   {% endif %}
-  </div>
+
+  {% if image.collection %}
+    <a id='{{image.collection}}'></a>
+  {% endif %}</div>
 {% endfor %}
 
 <!-- This loops the background image. The background images path in the front matter selects the image, the style="background-image" is inline css styling to apply the image settings, and the url ('{image.path}') selects the image from the front matter. the "image" in for image is a variable word just to let me know what it is. So when I create the url image.path the image. must match exactly the word after for -->
