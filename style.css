@@ -34,9 +34,14 @@ h1 {
   padding-left: 4%;
 }
 
+h2 {
+  text-align: center;
+}
+
+
 h3 {
   font-size: 2rem;
-  padding: 5%;
+  padding: 5% 5% 0% 0%;
 }
 
  .about {
@@ -58,6 +63,29 @@ h3 {
 .about h2 {
   line-height: 1;
   margin-bottom: 0.5rem;
+}
+
+
+.blog-title {
+  font-size: 4vw;
+  font-weight: 400;
+  padding: 2% 5%;
+}
+
+.blog-link {
+  font-weight: 300;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.date {
+  font-weight: 300;
+  font-size: 1vw;
+  padding: 1% 1% 1% 5%;
+}
+
+.blog-post {
+  padding: 1% 5%;
 }
 
 .description{
@@ -101,6 +129,14 @@ h3 {
   color: rgba(255,255,255,0.7);
 }
 
+.blog-image {
+  background-size: cover;
+  background-position: center;
+  margin: 5%;
+  display: block;
+  height: 50vh;
+}
+
 .bg-image {
   background-attachment: fixed; /*this fixes the background image in place and allows me to scroll over it, creating a groovy effect*/
   background-size: cover;
@@ -120,5 +156,5 @@ h3 {
   background-image: url('images/saturday-arvo7.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 20vh;
+  height: 20vh;
 }

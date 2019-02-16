@@ -1,7 +1,21 @@
 ---
 layout: default
-title
+title: My Blog
 ---
-<h1>My Blog</h1>
-  <div class="blog-post">
-    <p class="summary"> {{ page.category }}
+  <div class="banner-image"></div>
+  <div>
+  <!-- <h2>My Blog</h2> don't need this because the layout is using the title-->
+    <div class="grid-middle">
+
+     {% for post in site.posts %}
+
+     <div class="blog-image col-5" style="background-image: url('{{ post.blog-image }}')"></div>
+     <div class="col-5">
+       <h3><a class="blog-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+       <p class="date"> {{ post.date | date_to_long_string }}</p>
+       <p> {{ post.excerpt }} </p>
+     </div>
+     {% endfor %}
+     <div class="banner-image"></div>
+    </div>
+  </div>
