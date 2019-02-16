@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Adrienne Williams
+title: Adrienne Williams | Visual Artist
 background-images:
   - path: images/saturday-arvo1.jpg
     collection: saturday
@@ -17,7 +17,7 @@ background-images:
   - path: images/studio2.jpg
 ---
 
- <!-- above the --- (frontmatter) this sets my layout to default. Don't comment in the frontmatter, it breaks everything -->
+<!-- above the --- (frontmatter) this sets my layout to default. Don't comment in the frontmatter, it breaks everything -->
 {% for image in page.background-images %}
   {% if image.collection %}
     <a id='{{image.collection}}'></a>
