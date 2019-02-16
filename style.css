@@ -158,3 +158,25 @@ h3 {
   background-position: center;
   height: 20vh;
 }
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+form input,
+form textarea {
+  width: 100%;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border: 1px solid #16202E;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+textarea {
+  min-height: 12rem;
+}
+
+form input[type="submit"] {
+  background-color: #16202E;
+  color:white;
+  border: none;
+}
